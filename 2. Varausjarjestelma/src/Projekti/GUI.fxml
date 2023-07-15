@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+
+<TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="539.0" prefWidth="827.0" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Projekti.Controller">
+    <tabs>
+        <Tab fx:id="tabHaku" text="Haku">
+            <fx:include source="HakuMenu.fxml" />
+        </Tab>
+        <Tab fx:id="tabKalenteri" text="Kalenteri">
+            <fx:include source="KalenteriMenu.fxml" />
+        </Tab>
+        <Tab fx:id="tabMokki" text="Mökki">
+            <fx:include source="MökkiMenu.fxml" />
+        </Tab>
+        <Tab fx:id="tabPalvelut" text="Palvelut">
+          <fx:include source="PalvelutMenu.fxml" />
+        </Tab>
+        <Tab fx:id="tabAsiakas" text="Asiakas">
+          <fx:include source="AsiakasMenu.fxml" />
+        </Tab>
+    </tabs>
+</TabPane>

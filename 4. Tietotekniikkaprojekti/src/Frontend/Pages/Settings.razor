@@ -1,0 +1,53 @@
+﻿@page "/settings"
+@using Models;
+@inject IJSRuntime JS;
+
+<PageTitle>Asetukset</PageTitle>
+
+<h1>Asetukset</h1>
+<div>
+    <div>
+        <p>Lähetä raportti sähköpostiin</p>
+        <label>Syötä sähköposti <input type="text" /></label>
+        <button>Lähetä</button>
+    </div>
+    <br />
+    <br />
+    <div class="theme-class">
+        <label>
+            Teema
+               <select class="form-control" @bind-value="teema.selectedTheme" @onchange="sendData" @bind-value:event="oninput">
+                <option disabled selected hidden>Valitse</option>
+                <option value="dark">DarkMode</option>
+                <option value="light">LightMode</option>
+                </select>
+        </label>
+    </div>
+</div>
+<div>
+    <button class="btn btn-primary mt-3" @onclick="DownloadPdf">Lataa PDF Raportti</button>
+</div>
+<div>
+    <button class="btn btn-primary-empty mt-3"> Tyhjennä historia</button>
+</div>
+
+@code {
+    public Theme teema = new Theme();
+
+    [CascadingParameter]
+    public EventCallback<Theme> notifyLayout { get; set; }
+
+    public void sendData()
+    {
+        notifyLayout.InvokeAsync(teema);
+    }
+
+    async Task DownloadPdf()
+    {
+        var module = await JS.InvokeAsync<IJSObjectReference>("import", "./HtmlToPdf.js");
+
+        await module.InvokeVoidAsync("generateAndDownloadPdf", "<h1>sample</h1>", "sample.pdf");
+
+        var bytes = await module.InvokeAsync<byte[]>("generatePdf", "<h1>sample</h1>");
+    }
+}

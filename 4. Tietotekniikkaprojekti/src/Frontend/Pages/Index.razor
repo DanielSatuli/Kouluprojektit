@@ -1,0 +1,54 @@
+﻿@page "/"
+@using Microsoft.AspNetCore.Components
+@using Microsoft.AspNetCore.Components.WebAssembly.Services
+@using SharedLib
+@inject HttpClient http
+@inject NavigationManager navManager
+<style>
+    @@media (min-width: 400px) {
+        .items-container {
+            grid-template-columns: repeat(1, 1fr);
+        }
+    }
+
+    @@media (min-width: 800px) {
+        .items-container {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+    @@media (min-width: 1200px) {
+        .items-container {
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
+</style>
+<PageTitle>Seuranta</PageTitle>
+<h1>Seuranta</h1>
+
+
+@if (items == null)
+{
+    <p>Ladataan...</p>
+}
+else
+{
+    <div class="items-container">
+        @foreach (var item in items)
+        {
+            <ErrorItem Item="item" BrowseLink=@($"/{item.Id}") />
+        }
+    </div>
+}
+
+
+
+@code {
+    public List<ItemDTO>? items;
+
+    protected override async Task OnInitializedAsync()
+    {
+        items = await http.GetFromJsonAsync<List<ItemDTO>>($"/items/");
+    }
+}
+

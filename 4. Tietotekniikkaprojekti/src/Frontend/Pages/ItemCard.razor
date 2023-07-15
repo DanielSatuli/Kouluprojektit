@@ -1,0 +1,66 @@
+﻿@page "/history/{Id}"
+@using Microsoft.AspNetCore.Components
+@using Microsoft.AspNetCore.Components.WebAssembly.Services
+@using SharedLib
+@inject HttpClient http
+@inject NavigationManager navManager
+
+<style>
+    @@media (min-width: 400px) {
+        .item-container {
+            grid-template-columns: repeat(1, 1fr);
+        }
+
+        .item-container {
+            max-width: 1600px;
+            margin: 0 auto;
+            display: grid;
+        }
+
+        .accept {
+            background-color: #00A300;
+            border-color: #00A300;
+            color: white;
+            padding: 15px;
+            width: 150px;
+            margin-bottom: 35px;
+            margin-right: 40px;
+        }
+        .btn-primary {
+            padding: 15px;
+            width: 345px;
+        }
+    }
+</style>
+
+<PageTitle>Lisätiedot</PageTitle>
+<h3>Lisätiedot</h3>
+
+@if (item == null)
+{
+    <p>Ladataan...</p>
+}
+
+else
+{
+    <div class="item-container">
+        <p>Virhe ID: @item.Id</p>
+        <p style="font-size: 18px; font-weight: bold;">@item.Error</p>
+        <p>Virhe: @item.Description</p>
+        <p>Aika: @DateTime.Parse(item.When).ToString("dd-MM-yyyy HH:mm:ss")</p>
+    </div>
+    <div>
+        <a href="/" class="btn btn-primary">←Takaisin</a>
+    </div>
+}
+
+@code {
+    [Parameter]
+    public string Id { get; set; }
+
+    public ItemDTO item { get; set; }
+    protected override async Task OnInitializedAsync()
+    {
+        item = await http.GetFromJsonAsync<ItemDTO>($"/history/item/id/{Id}");
+    }
+}

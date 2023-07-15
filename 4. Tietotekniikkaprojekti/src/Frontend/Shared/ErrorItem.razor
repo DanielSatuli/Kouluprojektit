@@ -1,0 +1,23 @@
+﻿@inject IJSRuntime JSRuntime
+@using SharedLib
+
+<div class="item">
+    <p style="font-size: 18px; font-weight: bold;">@Item.Error</p>
+    <p>Virhe: @Item.Description</p>
+    <p>Aika: @DateTime.Parse(Item.When).ToString("dd-MM-yyyy HH:mm:ss")</p>
+    <div class="links">
+        @if (!string.IsNullOrEmpty(BrowseLink))
+        {
+            <a href="@BrowseLink" class="btn btn-primary" Match="NavLinkMatch.All">Lisätiedot</a>
+        }
+    </div>
+</div>
+
+
+@code {
+    [Parameter]
+    public ItemDTO? Item { get; set; }
+
+    [Parameter]
+    public string? BrowseLink { get; set; }
+}

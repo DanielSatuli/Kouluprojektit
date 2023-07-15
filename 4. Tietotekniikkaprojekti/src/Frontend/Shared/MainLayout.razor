@@ -1,0 +1,43 @@
+﻿@inherits LayoutComponentBase
+@using Models;
+
+<div class="page @GetTheme()">
+    <div style="background-image:none;background-color: #333333;" class="sidebar">
+        <NavMenu />
+    </div>
+
+    <main>
+        <div style="background-image:none;background-color:#4d4c4c; border-bottom: 3px solid #fc0524;" class="top-row px-4">
+            <a href="https://docs.microsoft.com/aspnet/" target="_blank">Tiedot</a>
+        </div>
+
+        <article class="content px-4">
+            <CascadingValue Value="event_theme">
+                @Body
+            </CascadingValue>
+        </article>
+    </main>
+</div>
+@code
+{
+    public Theme the { get; set; }
+
+    EventCallback<Theme> event_theme => EventCallback.Factory.Create(this, (Action<Theme>)NotifyLayoutWithTheme);
+
+    private void NotifyLayoutWithTheme(Theme _the)
+    {
+        the = _the;
+        selectedTeema = the.selectedTheme;
+    }
+
+    private string selectedTeema = "light";
+
+    private string GetTheme()
+    {
+        if (selectedTeema == "light" || selectedTeema == null)
+        {
+            return String.Empty;
+        }
+        else return "dark-mode";
+    }
+}

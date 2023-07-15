@@ -1,0 +1,35 @@
+Vaihtoehto 3
+
+Tee sovellus, jolla voi pitää yllä yrityksen henkilöstön tietoja ja henkilön toimisuhteen tietoja. 
+Sovelluksen täytyy pitää lokia kaikista tehdyistä toiminteista (kuka teki, mitä teki, milloin teki). 
+Sovelluksen käyttäjän ei tarvitse kirjautua sovellukseen. Lokitiedot tallennetaan tekstitiedostoon selkokielisenä. 
+Henkilöiden ja toimisuhteiden tiedot tallennetaan tiedostoon, jonka voi halutessaan kryptata jotenkin.
+
+Henkilöistä tallennetaan tiedot:
+
+etunimet
+sukunimi
+kutsumanimi
+henkilötunnus (HETU)
+kotiosoite:
+   katuosoite
+   postinumero
+   postitoimipaikka
+
+Toimisuhteesta tallennetaan tiedot:
+
+alkamispäivä
+päättymispäivä (huom. voi olla myös toistaiseksi voimassa oleva, jolloin päättymispäivää ei täytetä)
+nimike
+yksikkö (osasto, jossa henkilö työskentelee)
+
+Kaikkia tietoja tulee pystyä muokkaamaan sovelluksessa ja muutokset tulee tallentua tiedostoon. Tietoja täytyy pystyä lisäämään ja poistamaan. 
+Tietoja poistettaessa täytyy käyttäjältä kysyä varmennus tietojen poistolle.
+Henkilötunnuksen tulee olla oikeanlainen. Tee sovellukseen tarkastus, joka varmentaa syötetyn henkilötunnuksen. 
+Ohjeet varmentamiseen löytyvät https://dvv.fi/henkilotunnus.
+Sovellus osaa ehdottaa postitoimipaikkaa syötetyn postinumeron perusteella. 
+Esimerkiksi kirjoittamalla postinumeron alkuun merkit 70 ehdottaa sovellus postitoimipaikaksi Kuopio. 
+Ehdotukset luetaan aiemmin syötetyistä tiedoista (eli ensimmäisellä kerralla sovelluksella ei ole tietoja ehdotuksiksi).
+Sovellus listaa henkilöt ja listaa tulee pystyä järjestämään kutsumanimen, sukunimen sekä nimikkeen perusteella nousevaan (a - z) ja laskevaan (z - a) aakkosjärjestykseen.
+
+Vinkki: lokitiedostoon saadaan sovellusta käyttävän käyttäjän tunnuksen tiedot Environment-luokalta https://docs.microsoft.com/en-us/dotnet/api/system.environment?view=netframework-4.6.1

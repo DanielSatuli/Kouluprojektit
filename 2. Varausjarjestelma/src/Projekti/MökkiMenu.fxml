@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.text.Font?>
+<BorderPane prefHeight="200.0" prefWidth="200.0" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Projekti.Controller">
+        <left>
+            <AnchorPane prefHeight="510.0" prefWidth="446.0" BorderPane.alignment="CENTER">
+                <children>
+                    <TextField fx:id="tfNimi" layoutX="134.0" layoutY="83.0" prefHeight="25.0" prefWidth="145.0" />
+                    <Button fx:id="btnTallenna" layoutX="5.0" layoutY="471.0" mnemonicParsing="false" onAction="#Tallenna" text="Tallenna" />
+                    <TextField fx:id="tfKatu" layoutX="135.0" layoutY="118.0" prefHeight="25.0" prefWidth="144.0" />
+                    <TextField fx:id="tfPosti" layoutX="135.0" layoutY="152.0" prefHeight="25.0" prefWidth="144.0" />
+                    <TextField fx:id="tfHinta" layoutX="135.0" layoutY="186.0" prefHeight="25.0" prefWidth="144.0" />
+                    <Text layoutX="23.0" layoutY="100.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nimi" />
+                    <Text layoutX="24.0" layoutY="135.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Katuosoite" />
+                    <Text layoutX="24.0" layoutY="169.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Postinumero" />
+                    <Text layoutX="24.0" layoutY="203.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Henkilömäärä (max)" />
+                    <TextArea fx:id="taKuvaus" layoutX="136.0" layoutY="355.0" prefHeight="105.0" prefWidth="266.0" />
+                    <Text layoutX="29.0" layoutY="368.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Kuvaus" />
+                    <Button fx:id="btnMuokkaa" layoutX="80.0" layoutY="471.0" mnemonicParsing="false" text="Muokkaa" />
+                    <Text layoutX="20.0" layoutY="31.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Kohteen ID" />
+                    <Text layoutX="21.0" layoutY="64.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Toiminta-alue" />
+                    <Text layoutX="25.0" layoutY="254.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Varustelu" />
+                    <TextField fx:id="tfID" layoutX="133.0" layoutY="14.0" prefHeight="25.0" prefWidth="146.0" />
+                    <TextField fx:id="tfAlue" layoutX="133.0" layoutY="47.0" prefHeight="25.0" prefWidth="146.0" />
+                    <TextArea fx:id="taVarustelu" layoutX="135.0" layoutY="241.0" prefHeight="107.0" prefWidth="267.0" />
+                </children>
+            </AnchorPane>
+        </left>
+        <right>
+            <AnchorPane prefHeight="510.0" prefWidth="374.0" BorderPane.alignment="CENTER">
+                <children>
+                    <ImageView fitHeight="231.0" fitWidth="366.0" layoutY="101.0" pickOnBounds="true" preserveRatio="true">
+                        <image>
+                            <Image url="@../../../../Downloads/af91282c5b9f252a6ad779ecc2b55931af833c05.jpg" />
+                        </image>
+                    </ImageView>
+                    <Text fill="#f5f4f4" layoutX="10.0" layoutY="184.0" strokeType="OUTSIDE" strokeWidth="0.0" text="PLACE   HOLDER" wrappingWidth="354.13671875">
+                        <font>
+                            <Font size="77.0" />
+                        </font>
+                    </Text>
+                </children></AnchorPane>
+        </right>
+    </BorderPane>
+

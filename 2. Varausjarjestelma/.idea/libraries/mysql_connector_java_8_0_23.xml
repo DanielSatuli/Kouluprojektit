@@ -1,0 +1,14 @@
+<component name="libraryTable">
+  <library name="mysql-connector-java-8.0.23">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/Desktop/mysql-connector-java-8.0.23/mysql-connector-java-8.0.23.jar!/" />
+      <root url="file://$USER_HOME$/Desktop/javafx-sdk-15.0.1/lib" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="file://$USER_HOME$/Desktop/javafx-sdk-15.0.1/lib" />
+    </SOURCES>
+    <jarDirectory url="file://$USER_HOME$/Desktop/javafx-sdk-15.0.1/lib" recursive="false" />
+    <jarDirectory url="file://$USER_HOME$/Desktop/javafx-sdk-15.0.1/lib" recursive="false" type="SOURCES" />
+  </library>
+</component>
