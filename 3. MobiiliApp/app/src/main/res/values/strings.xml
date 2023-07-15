@@ -1,0 +1,51 @@
+<resources>
+    <string name="app_name">ReseptiApp</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Reseptisovellus</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_home">Kotisivu</string>
+    <string name="menu_search">Haku</string>
+    <string name="menu_all_recipes">Reseptit</string>
+    <string name="menu_add">Lisää</string>
+    <string name="menu_add_recipe">Lisää resepti</string>
+    <string name="app_bar_darkmode">Dark Mode</string>
+    <string name="app_bar_lightmode">Light Mode</string>
+
+    <string name="description">Kuvaus:</string>
+    <string name="recipe_instructions">Valmistusohje:</string>
+    <string name="recipe_prefix_cooking_time_in_minutes">n.</string>
+
+    <string name="recipe_cooking_time_in_minutes">Valmistusaika:</string>
+    <string name="recipe_cooking_time_minutes">minuuttia</string>
+    <string name="recipe_cooking_time_hours">tuntia</string>
+    <string name="recipe_cooking_time_days">päivää</string>
+
+    <!-- Toasts -->
+    <string name="network_error_toast">Yhteysvirhe: Uusia reseptejä ei voitu synkronoida</string>
+    <string name="no_search_results_toast">Ei hakutuloksia</string>
+
+    <!-- Untitled category -->
+    <string name="made_by">Made By: Viljami Mäkelä &amp; Daniel Satuli</string>
+    <string name="share">Share</string>
+    <string name="search_text">Haku</string>
+    <string name="recipe_search">Hae resepti tästä</string>
+    <string name="add_text">Lisää resepti</string>
+    <string name="query_hint">Etsi resepti</string>
+    <string name="required">Vaadittu</string>
+    <string name="recipe_name">Reseptin nimi</string>
+    <string name="time_eval">Aika-arvio minuutteina:</string>
+    <string name="manual">Valmistus ohjeet</string>
+    <string name="mButton">Valitse</string>
+    <string name="label1">Valitse kuva kirjastosta</string>
+    <string name="label2">Ota kuva kameralla</string>
+    <string name="mButton2">Ota kuva</string>
+    <string name="addToDB">Luo resepti</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string name="recipe_ingredients">Ainesosat:</string>
+
+
+</resources>
