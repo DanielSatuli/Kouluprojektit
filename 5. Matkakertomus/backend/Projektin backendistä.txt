@@ -1,0 +1,39 @@
+Tietokannan asennus (näkyy myös azuren backlogissa):
+
+TCP/IP
+db-Portti: 3306
+user: root
+password: Ruutti
+db-name: matkakertomus
+noden portti: 3000 (huom. määritetään vain koodiin)
+
+
+
+NodeJS ja package-json:
+
+- tee hakemisto
+- cmd -> cd /jotain/jotain/hakemisto
+- npm init -y
+
+
+
+Nodenpaketit (ajakaa backend-hakemistoon):
+
+- npm install mysql
+- npm install express
+- npm install body-parser
+- npm install cors
+- npm install argon2
+
+jos herjaa käynnistettäessä serveriä jotain puuttuvan, asentakaa.
+
+Palvelin ajetaan cmd:ssä komennolla "node server.js" backend-hakemistossa (tai server.js tiedostosijainnissa).
+Cmd kuittaa kun palvelin käynnistyy.
+
+
+
+Huomioitavaa:
+
+- matkaajataulun password -> muuttakaa "long text" muotoon.
+  Voidaan myös ajaa myöhemmin kaikille scriptillä sama tietokanta,
+  kun kaikki tarvittavat muokkaukset tehty.
